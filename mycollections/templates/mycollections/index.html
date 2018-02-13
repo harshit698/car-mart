@@ -1,0 +1,6 @@
+{%for car in car%}
+	<li>{{car.brand}} {{car.name}}<br>Horsepower: {{car.horsepower}}<br>Stock Left: {{car.stock}}</li>
+	<a href="{%url 'mycollections:buycar' car.id%}"><button>Buy</button></a>
+	<a href="{%url 'mycollections:detailcar' car.id%}"><button>Details</button></a>
+	<br><br>
+{%endfor%}
